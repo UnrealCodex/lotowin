@@ -664,13 +664,13 @@ class TCPDF {
 	 * Boolean flag to print/hide page header.
 	 * @protected
 	 */
-	protected $print_header = true;
+	protected $print_header = false;
 
 	/**
 	 * Boolean flag to print/hide page footer.
 	 * @protected
 	 */
-	protected $print_footer = true;
+	protected $print_footer = false;
 
 	/**
 	 * Header image logo.
@@ -682,7 +682,7 @@ class TCPDF {
 	 * Width of header image logo in user units.
 	 * @protected
 	 */
-	protected $header_logo_width = 30;
+	protected $header_logo_width = 3;
 
 	/**
 	 * Title to be printed on default page header.

@@ -52,8 +52,8 @@ $pdf->SetKeywords('loteria , personal');
 //$pdf->SetHeaderData(PDF_HEADER_LOGO.'clubmex.jpg', PDF_HEADER_LOGO_WIDTH.'30', PDF_HEADER_TITLE.'Formulario Visa', PDF_HEADER_STRING.'http://www.clubmexicano.org');
 
 // set header and footer fonts
-$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-$pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+//$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+//$pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
 // set default monospaced font
 $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
@@ -91,56 +91,56 @@ $pdf->AddPage();
 
 $html = <<<EOD
 
-<table  border="1" >
+<table  border="0" >
   
   <tr>
-   <td align="rigth"><img src="12.jpg"></td>
+    <td align="left"><img src="12.jpg"></td>
     <td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
   </tr>
   <tr>
-    <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
     <td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
   </tr>
   <tr>
-   <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
     <td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
   </tr>
     <tr>
-   <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
     <td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
     </tr>
 </table>
-	
+	<br><br>
 	<table  border="1" >
   
   <tr>
-   <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
     <td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
   </tr>
   <tr>
-    <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
     <td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
   </tr>
   <tr>
-   <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
     <td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
   </tr>
     <tr>
-   <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
     <td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
 	<td align="left"><img src="12.jpg"></td>
