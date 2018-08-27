@@ -1,11 +1,11 @@
 <?php
-$conexion=mysql_connect("localhost","mmigrant_nuevo_a","789poiQWE,.-") or die("Problemas en la conexion");
-mysql_select_db("mmigrant_basedatos",$conexion) or die("Problemas en la seleccion de la base de datos");
-$registros=mysql_query("select * from visa where int_fol = $_REQUEST[int_fol]" , $conexion) or die("Problemas en el select:".mysql_error());
+//$conexion=mysql_connect("localhost","mmigrant_nuevo_a","789poiQWE,.-") or die("Problemas en la conexion");
+//mysql_select_db("mmigrant_basedatos",$conexion) or die("Problemas en la seleccion de la base de datos");
+//$registros=mysql_query("select * from visa where int_fol = $_REQUEST[int_fol]" , $conexion) or die("Problemas en el select:".mysql_error());
 
-$reg=mysql_fetch_array($registros) ;
+//$reg=mysql_fetch_array($registros) ;
 
-$int_fol = $reg[int_fol];
+//$int_fol = $reg[int_fol];
 
 //============================================================+
 // File name : example_001.php
@@ -90,77 +90,61 @@ $pdf->AddPage();
 // Set some content to print
 
 $html = <<<EOD
-<div align="center"><h3><strong>FOLIO:</strong><span style="background-color:#F0F0F0">$reg[int_fol]</span><br><br>
 
-<strong>Nombre Completo:</strong><span style="background-color:#F0F0F0">$reg[nom_usr] $reg[apep_usr] $reg[apem_usr]</span><br><br>
-<strong>No. Pasaporte:</strong><span style="background-color:#F0F0F0">$reg[numpass]</span><br><br>
-
-<strong>Fecha Nacimiento:</strong><span style="background-color:#F0F0F0">$reg[fec_naci]</span><br><br>
-<strong>Tel:</strong><span style="background-color:#F0F0F0">$reg[tel]</span><br><br>
-
-
-</h3>
 <table  border="1" >
+  
   <tr>
-    <td colspan="2" align="center"><strong>Informacion General</strong></td>
-  </tr>
-  <tr>
-    <td align="rigth">Sexo: </td>
-    <td align="left">$reg[sex_usr]</td>
+   <td align="rigth"><img src="12.jpg"></td>
+    <td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
   </tr>
   <tr>
     <td align="rigth">Estado Civil:</td>
-    <td align="left">$reg[estciv_usr]</td>
+    <td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
   </tr>
   <tr>
-    <td align="rigth">Ciudad Nacimiento:</td>
-    <td align="left">$reg[ciud_nac]</td>
-  </tr>
-  <tr>
-    <td align="rigth">Estado Nacimiento:</td>
-    <td align="left">$reg[est_usr]</td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><strong>Direccion e Informacion Telefonica</strong></td>
-  </tr>
-  <tr>
-    <td align="rigth">Calle:</td>
-    <td align="left">$reg[calle]</td>
-  </tr>
-  <tr>
-    <td align="rigth">Colonia:</td>
-    <td align="left">$reg[colonia]</td>
-  </tr>
-  <tr>
-    <td align="rigth">Municipio:</td>
-    <td align="left">$reg[municipio]</td>
-  </tr>
-  <tr>
-    <td align="rigth">Estado :</td>
-    <td align="left">$reg[est_dir]</td>
-  </tr>
-  <tr>
-    <td align="rigth">Codigo Postal:</td>
-    <td align="left">$reg[cp]</td>
-  </tr>
-  <tr>
-    <td align="rigth">Pais:</td>
-    <td align="left">$reg[pais]</td>
-  </tr>
-   <tr>
-    <td align="rigth">Cel:</td>
-    <td align="left">$reg[cel]</td>
+   <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
   </tr>
     <tr>
-    <td align="rigth">Correo Electronico:</td>
-    <td align="left">$reg[email]</td>
-  </tr>
+   <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+    </tr>
 </table>
-</div>
-
-<table border="1"  >
-<tr><td align="center"><strong>Comentarios:</strong></td></tr>
-<tr><td><br>$reg[comentarioss]<br><br></td></tr>
+	
+	<table  border="1" >
+  
+  <tr>
+   <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+  </tr>
+  <tr>
+    <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+  </tr>
+  <tr>
+   <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+  </tr>
+    <tr>
+   <td align="rigth">Estado Civil:</td>
+    <td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+	<td align="left"><img src="12.jpg"></td>
+    </tr>
 </table>
 
 
