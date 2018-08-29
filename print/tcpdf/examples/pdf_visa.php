@@ -91,60 +91,89 @@ $pdf->AddPage();
 
 $html = <<<EOD
 
-<table  border="0" >
-  
-  <tr>
-    <td align="left"><img src="12.jpg"></td>
-    <td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-  </tr>
-  <tr>
-    <td align="left"><img src="12.jpg"></td>
-    <td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-  </tr>
-  <tr>
-    <td align="left"><img src="12.jpg"></td>
-    <td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-  </tr>
-    <tr>
-    <td align="left"><img src="12.jpg"></td>
-    <td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-    </tr>
-</table>
-	<br><br>
-	<table  border="1" >
-  
-  <tr>
-    <td align="left"><img src="12.jpg"></td>
-    <td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-  </tr>
-  <tr>
-    <td align="left"><img src="12.jpg"></td>
-    <td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-  </tr>
-  <tr>
-    <td align="left"><img src="12.jpg"></td>
-    <td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-  </tr>
-    <tr>
-    <td align="left"><img src="12.jpg"></td>
-    <td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-	<td align="left"><img src="12.jpg"></td>
-    </tr>
+<table id="Tabla_01" width="1476" height="2363" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="8">
+			<img src="images/carta_01.gif" width="1476" height="99" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="7">
+			<img src="images/carta_02.gif" width="92" height="2263" alt=""></td>
+		<td>
+			<img src="images/carta_03.gif" width="323" height="522" alt=""></td>
+		<td>
+			<img src="images/carta_04.gif" width="323" height="522" alt=""></td>
+		<td>
+			<img src="images/carta_05.gif" width="323" height="522" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_06.gif" width="323" height="522" alt=""></td>
+		<td colspan="2" rowspan="5">
+			<img src="images/carta_07.gif" width="92" height="2136" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/carta_08.gif" width="323" height="522" alt=""></td>
+		<td>
+			<img src="images/carta_09.gif" width="323" height="522" alt=""></td>
+		<td>
+			<img src="images/carta_10.gif" width="323" height="522" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_11.gif" width="323" height="522" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/carta_12.gif" width="323" height="522" alt=""></td>
+		<td>
+			<img src="images/carta_13.gif" width="323" height="522" alt=""></td>
+		<td>
+			<img src="images/carta_14.gif" width="323" height="522" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_15.gif" width="323" height="522" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/carta_16.gif" width="323" height="522" alt=""></td>
+		<td>
+			<img src="images/carta_17.gif" width="323" height="522" alt=""></td>
+		<td>
+			<img src="images/carta_18.gif" width="323" height="522" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_19.gif" width="323" height="522" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<img src="images/carta_20.gif" width="1292" height="48" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="4" rowspan="2">
+			<img src="images/carta_21.gif" width="1145" height="127" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_22.gif" width="185" height="100" alt=""></td>
+		<td rowspan="2">
+			<img src="images/carta_23.gif" width="54" height="127" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="images/carta_24.gif" width="185" height="27" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/espacio.gif" width="92" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="323" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="323" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="323" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="176" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="147" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="38" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="54" height="1" alt=""></td>
+	</tr>
 </table>
 
 
