@@ -65,7 +65,7 @@ $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
 //set auto page breaks
 $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-
+//$pdf->SetAutoPageBreak(false, 0);
 //set image scale factor
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
@@ -91,93 +91,130 @@ $pdf->AddPage();
 
 $html = <<<EOD
 
-<table id="Tabla_01" width="372" border="1" cellpadding="0" cellspacing="0" nobr="true">
-	<tr>
-		<td colspan="9">
-			<img src="images/mini_01.gif" 36924 alt=""></td>
-	</tr>
-	<tr>
-		<td rowspan="7">
-			<img src="images/mini_02.gif" 23567 alt=""></td>
-		<td>
-			<img src="images/mini_03.gif" 80131 alt=""></td>
-		<td colspan="2">
-			<img src="images/mini_04.gif" 82131 alt=""></td>
-		<td>
-			<img src="images/mini_05.gif" 80131 alt=""></td>
-		<td colspan="2">
-			<img src="images/mini_06.gif" 81131 alt=""></td>
-		<td colspan="2" rowspan="5">
-			<img src="images/mini_07.gif" 23535 alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="images/mini_08.gif" 80130 alt=""></td>
-		<td>
-			<img src="images/mini_09.gif" 81130 alt=""></td>
-		<td colspan="2">
-			<img src="images/mini_10.gif" 81130 alt=""></td>
-		<td colspan="2">
-			<img src="images/mini_11.gif" 81130 alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="images/mini_12.gif" 80131 alt=""></td>
-		<td>
-			<img src="images/mini_13.gif" 81131 alt=""></td>
-		<td colspan="2">
-			<img src="images/mini_14.gif" 81131 alt=""></td>
-		<td colspan="2">
-			<img src="images/mini_15.gif" 81131 alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="images/mini_16.gif" 80132 alt=""></td>
-		<td>
-			<img src="images/mini_17.gif" 81132 alt=""></td>
-		<td colspan="2">
-			<img src="images/mini_18.gif" 81132 alt=""></td>
-		<td colspan="2">
-			<img src="images/mini_19.gif" 81132 alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="6">
-			<img src="images/mini_20.gif" 32311 alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="5" rowspan="2">
-			<img src="images/mini_21.gif" 28632 alt=""></td>
-		<td colspan="2">
-			<img src="images/mini_22.gif" 4726 alt=""></td>
-		<td rowspan="2">
-			<img src="images/mini_23.gif" 1332 alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<img src="images/mini_24.gif" 476 alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="images/espacio.gif" 231 alt=""></td>
-		<td>
-			<img src="images/espacio.gif" 801 alt=""></td>
-		<td>
-			<img src="images/espacio.gif" 811 alt=""></td>
-		<td>
-			<img src="images/espacio.gif" 11 alt=""></td>
-		<td>
-			<img src="images/espacio.gif" 801 alt=""></td>
-		<td>
-			<img src="images/espacio.gif" 441 alt=""></td>
-		<td>
-			<img src="images/espacio.gif" 371 alt=""></td>
-		<td>
-			<img src="images/espacio.gif" 101 alt=""></td>
-		<td>
-			<img src="images/espacio.gif" 131 alt=""></td>
-	</tr>
-</table>
+<style>
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
 
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+</style>
+<table>
+  <caption>Statement Summary</caption>
+  <thead>
+    <tr>
+      <th scope="col">Account</th>
+      <th scope="col">Due Date</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Period</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Account">Visa - 3412</td>
+      <td data-label="Due Date">04/01/2016</td>
+      <td data-label="Amount">$1,190</td>
+      <td data-label="Period">03/01/2016 - 03/31/2016</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Account">Visa - 6076</td>
+      <td data-label="Due Date">03/01/2016</td>
+      <td data-label="Amount">$2,443</td>
+      <td data-label="Period">02/01/2016 - 02/29/2016</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Account">Corporate AMEX</td>
+      <td data-label="Due Date">03/01/2016</td>
+      <td data-label="Amount">$1,181</td>
+      <td data-label="Period">02/01/2016 - 02/29/2016</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Acount">Visa - 3412</td>
+      <td data-label="Due Date">02/01/2016</td>
+      <td data-label="Amount">$842</td>
+      <td data-label="Period">01/01/2016 - 01/31/2016</td>
+    </tr>
+  </tbody>
+</table>
 EOD;
 
 // Print text using writeHTMLCell()
