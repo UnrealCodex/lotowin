@@ -64,7 +64,7 @@ $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
 $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
 //set auto page breaks
-$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+$pdf->SetAutoPageBreak(FALSE, PDF_MARGIN_BOTTOM);
 //$pdf->SetAutoPageBreak(false, 0);
 //set image scale factor
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
@@ -89,35 +89,141 @@ $pdf->AddPage();
 
 // Set some content to print
 
-$html = <<<EOD
+$html = '
+<table id="Tabla_01" width="369" height="592" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="11">
+			<img src="images/carta_01.gif" width="369" height="17" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="10">
+			<img src="images/carta_02.gif" width="17" height="574" alt=""></td>
+		<td>
+			<img src="images/carta_03.gif" width="81" height="131" alt=""></td>
+		<td rowspan="10">
+			<img src="images/carta_04.gif" width="3" height="574" alt=""></td>
+		<td>
+			<img src="images/carta_05.gif" width="82" height="131" alt=""></td>
+		<td rowspan="10">
+			<img src="images/carta_06.gif" width="3" height="574" alt=""></td>
+		<td>
+			<img src="images/carta_07.gif" width="81" height="131" alt=""></td>
+		<td rowspan="10">
+			<img src="images/carta_08.gif" width="3" height="574" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_09.gif" width="81" height="131" alt=""></td>
+		<td colspan="2" rowspan="8">
+			<img src="images/carta_10.gif" width="18" height="542" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/carta_11.gif" width="81" height="4" alt=""></td>
+		<td>
+			<img src="images/carta_12.gif" width="82" height="4" alt=""></td>
+		<td>
+			<img src="images/carta_13.gif" width="81" height="4" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_14.gif" width="81" height="4" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/carta_15.gif" width="81" height="131" alt=""></td>
+		<td>
+			<img src="images/carta_16.gif" width="82" height="131" alt=""></td>
+		<td>
+			<img src="images/carta_17.gif" width="81" height="131" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_18.gif" width="81" height="131" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/carta_19.gif" width="81" height="4" alt=""></td>
+		<td>
+			<img src="images/carta_20.gif" width="82" height="4" alt=""></td>
+		<td>
+			<img src="images/carta_21.gif" width="81" height="4" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_22.gif" width="81" height="4" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/carta_23.gif" width="81" height="131" alt=""></td>
+		<td>
+			<img src="images/carta_24.gif" width="82" height="131" alt=""></td>
+		<td>
+			<img src="images/carta_25.gif" width="81" height="131" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_26.gif" width="81" height="131" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/carta_27.gif" width="81" height="4" alt=""></td>
+		<td>
+			<img src="images/carta_28.gif" width="82" height="4" alt=""></td>
+		<td>
+			<img src="images/carta_29.gif" width="81" height="4" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_30.gif" width="81" height="4" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/carta_31.gif" width="81" height="132" alt=""></td>
+		<td>
+			<img src="images/carta_32.gif" width="82" height="132" alt=""></td>
+		<td>
+			<img src="images/carta_33.gif" width="81" height="132" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_34.gif" width="81" height="132" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="3">
+			<img src="images/carta_35.gif" width="81" height="37" alt=""></td>
+		<td rowspan="3">
+			<img src="images/carta_36.gif" width="82" height="37" alt=""></td>
+		<td rowspan="3">
+			<img src="images/carta_37.gif" width="81" height="37" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_38.gif" width="81" height="5" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<img src="images/carta_39.gif" width="39" height="32" alt=""></td>
+		<td colspan="2">
+			<img src="images/carta_40.png" width="47" height="26" alt=""></td>
+		<td rowspan="2">
+			<img src="images/carta_41.gif" width="13" height="32" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="images/carta_42.gif" width="47" height="6" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/espacio.gif" width="17" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="81" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="3" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="82" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="3" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="81" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="3" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="39" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="42" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="5" height="1" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="13" height="1" alt=""></td>
+	</tr>
+</table>'
 
-<table border="1" style="color: #000000">
-   <tr>
-      <td width="100%" colspan="4">
-         <table border="0">
-            <tr>
-               <!-- This should work -->
-               <td width="18%" style="border-right-width:0.1px;">Test 1</td>
-               <td width="12%">Test 2</td>
-               <td width="20%">Test 3</td>
-            </tr>
-            <tr>
-               <!-- As should this -->
-               <td width="18%" style="border-right:0.1px solid black;">Test 4</td>
-               <td width="12%">Test 5</td>
-               <td width="20%">Test 6</td>
-            </tr>
-            <tr>
-               <!-- However, this does not. -->
-               <td width="18%" style="border-right:0.1px">Test Broken</td>
-               <td width="12%">Test :)</td>
-               <td width="20%">Test :)</td>
-            </tr>                
-         </table>
-      </td>
-   </tr>
-</table>
-EOD;
+;
 
 // Print text using writeHTMLCell()
 $pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
